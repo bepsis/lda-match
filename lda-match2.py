@@ -59,7 +59,6 @@ DEFAULT_P_THRESHOLD = .2
 MAX_DROP_PCT = .75
 USAGE = """
 USAGE: {} -a GRP1 -b GRP2 [-d] -m FEATS [-g GCOL] [-o OUTPUT] [-p P] INPUT
-
 """.format(__file__)
 
 
@@ -241,7 +240,7 @@ if __name__ == '__main__':
     ## read in source file
     print >> stderr, 'Reading in source data...',
     try:
-        with open(args[0], 'r') as f:
+        with open(args[0], 'rU') as f:
             (A_data, B_data, fieldnames) = read_csv(f, GROUP_COLUMN,
                                                     A_LABELS, B_LABELS)
     except (IOError, ValueError), err:

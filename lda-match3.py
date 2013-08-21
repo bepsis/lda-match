@@ -233,7 +233,7 @@ if __name__ == '__main__':
     ## read in source file
     print('Reading in source data...', end='', file=stderr)
     try:
-        with open(args[0], 'r') as f:
+        with open(args[0], 'rU') as f:
             (A_data, B_data, fieldnames) = read_csv(f, GROUP_COLUMN,
                                                     A_LABELS, B_LABELS)
     except (IOError, ValueError) as err:
