@@ -1,3 +1,5 @@
+NB: this is now deprecated in favor of the similarly named [ldamatch](https://github.com/cslu-nlp/ldamatch), written in pure R and introducing additional features.
+
 Introduction
 ============
 
